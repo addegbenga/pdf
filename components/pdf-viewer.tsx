@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import React from "react";
+import { useEffect, useMemo, useState } from "react";
 // import default react-pdf entry
 import { Document, Page, pdfjs } from "react-pdf";
 // import pdf worker as a url, see `next.config.js` and `pdf-worker.js`
 import workerSrc from "../pdf-worker";
-
 pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
 
-export default function PDFViewer() {
+function PDFViewer() {
   const [file, setFile] = useState("");
   const [numPages, setNumPages] = useState<any>(null);
 
@@ -32,6 +32,7 @@ export default function PDFViewer() {
               pageNumber={index + 1}
               renderAnnotationLayer={false}
               renderTextLayer={false}
+              renderMode={"canvas"}
             />
           ))}
         </Document>
@@ -39,3 +40,5 @@ export default function PDFViewer() {
     </div>
   );
 }
+
+export default React.memo(PDFViewer);
