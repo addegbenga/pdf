@@ -19,7 +19,9 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-pdf": "^6.2.0",
-    "typescript": "4.9.3"
+    "typescript": "4.9.3",
+    "@mikecousins/react-pdf": "5.5.1",
+    "@react-pdf/renderer": "1.6.8"
   },
   "devDependencies": {
     "@types/react-pdf": "^5.7.4",
