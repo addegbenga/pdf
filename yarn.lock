@@ -1599,6 +1599,11 @@ prop-types@^15.6.2, prop-types@^15.8.1:
     object-assign "^4.1.1"
     react-is "^16.13.1"
 
+pspdfkit@^2022.5.1:
+  version "2022.5.1"
+  resolved "https://registry.yarnpkg.com/pspdfkit/-/pspdfkit-2022.5.1.tgz#516a9df6207490ca8b749c9a3006c7b24bcafbaf"
+  integrity sha512-cdGcQ+1xgY2CMkf2BImXcaRIG6ibYgmvb0Cqf4GytOWxmKAaBpONHnGpcOKMDpefGA2K8oP3HuJLK/bS2NdFVQ==
+
 punycode@^2.1.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"

@@ -1,17 +1,12 @@
-import Head from "next/head";
-import { useState } from "react";
 import dynamic from "next/dynamic";
-const PDFViewer = dynamic(() => import("../components/pdf-viewer"), {
+import Head from "next/head";
+import { useEffect, useRef, useState } from "react";
+
+const DynamicHeader = dynamic(() => import("../components"), {
   ssr: false,
 });
 
 export default function Home() {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-
-  function onDocumentLoadSuccess({ numPages }: any) {
-    setNumPages(numPages);
-  }
   return (
     <div>
       <Head>
@@ -19,7 +14,7 @@ export default function Home() {
         <meta name="description" content="Research" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <PDFViewer />
+      <DynamicHeader />
     </div>
   );
 }
